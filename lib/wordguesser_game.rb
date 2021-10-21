@@ -7,6 +7,25 @@ class WordGuesserGame
 
   def initialize(word)
     @word = word
+    
+
+  end
+  # setter 
+  def word=(value)
+    return @word=value
+  end
+  # getter
+  def word
+    return @word
+  end
+  # 定义guesser 方法
+  def guesses
+    return ''
+  end
+  #定义wrong_guesses 方法
+  def wrong_guesses
+    return ''
+
   end
 
   # You can test it by installing irb via $ gem install irb
