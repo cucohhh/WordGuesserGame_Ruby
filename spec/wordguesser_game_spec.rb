@@ -106,17 +106,17 @@ describe WordGuesserGame do
 
   describe 'game status' do
     before :each do 
-      @game = WordGuesserGame.new('dog')
+      @game = WordGuesserGame.new('foobar')
     end
     it 'should be win when all letters guessed' do
-      guess_several_letters(@game, 'ogd')
+      guess_several_letters(@game, 'fobar')
       expect(@game.check_win_or_lose).to eq(:win)
     end
-    it 'should be lose after 7 incorrect guesses', :pending => true do
+    it 'should be lose after 7 incorrect guesses' do
       guess_several_letters(@game, 'tuvwxyz')
       expect(@game.check_win_or_lose).to eq(:lose)
     end
-    it 'should continue play if neither win nor lose', :pending => true do
+    it 'should continue play if neither win nor lose' do
       guess_several_letters(@game, 'do')
       expect(@game.check_win_or_lose).to eq(:play)
     end

@@ -8,6 +8,9 @@ require 'rack/test'
 require 'webmock/rspec'
 require 'byebug'
 
+require 'capybara/rspec'
+
+
 # setup test environment
 set :environment, :test
 set :run, false
