@@ -48,15 +48,19 @@ class WordGuesserApp < Sinatra::Base
       flag = @game.guess_several_letters(letter)
       if flag ==true
         flash[:message] = "You have already used that letter."
+        redirect '/show'
       end 
     rescue 
       
       flash[:message] = "Invalid guess."
-    end
-    
-   
       
+      
+    end
+    flash[:message] = "Invalid guess."
     redirect '/show'
+
+      
+    
     
      
     

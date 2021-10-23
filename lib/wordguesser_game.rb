@@ -86,6 +86,10 @@ class WordGuesserGame
     if value=='' || value=='%' || value==nil
       raise ArgumentError
     
+    elsif value <'A'|| value >'z'
+      
+      raise ArgumentError  
+
     else
       value = value.downcase
       mystr = String(word)
